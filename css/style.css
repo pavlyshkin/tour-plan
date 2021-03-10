@@ -18,6 +18,10 @@ img {
   max-width: 100%;
 }
 
+button {
+  outline: none;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -446,6 +450,7 @@ template {
   height: 100%;
   border: none;
   background-color: #EC1F46;
+  cursor: pointer;
 }
 
 .user {
@@ -798,6 +803,12 @@ template {
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
+  }
+  .slider {
+    width: 600px;
+  }
+  .swiper-slide__image {
+    height: 100%;
   }
 }
 

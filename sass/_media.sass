@@ -99,6 +99,16 @@
       &-form
         grid-column: span 5
         grid-row: 4
+  .packages
+    &__card
+      &-place
+        grid-row: 3
+      &-five
+        grid-row: 3
+      &-belle
+        grid-row: 2
+      &-white
+        grid-row: 2
 @media ( max-width: 768px )
   .container
     max-width: 576px
@@ -201,6 +211,33 @@
   .footer
     &__input
       flex-basis: 100%
+  .packages
+    &__wrapper
+      grid-template-columns: 1fr
+    &__card
+      &-blue
+        display: inline
+        grid-row: 1
+      &-belle
+        grid-row: 2
+      &-white
+        grid-row: 3
+      &-place
+        grid-row: 4
+      &-five
+        grid-row: 5
+    &__img
+      width: 100%
+      object-fit: cover
+      &-blue
+        border-radius: 8px 8px 0 0
+        height: 300px
+        width: 100%
+        object-fit: cover
+    &__info
+      &-blue
+        border-radius: 0 0 8px 8px
+        width: 100%
 @media ( max-width: 576px  )
   .logo
     width: 99px

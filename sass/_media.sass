@@ -74,6 +74,8 @@
     width: 339px
     height: 255px
   .footer
+    padding-top: 73px
+    padding-bottom: 33px
     &-wrapper
       grid-template-columns: repeat(6, 1fr)
       grid-row-gap: 40px
@@ -99,6 +101,10 @@
       &-form
         grid-column: span 5
         grid-row: 4
+    &-bottom
+      display: flex
+      justify-content: space-between
+      align-items: center
   .packages
     &__card
       &-place
@@ -109,13 +115,49 @@
         grid-row: 2
       &-white
         grid-row: 2
+
 @media ( max-width: 768px )
   .container
     max-width: 576px
     width: 92%
+  body
+    padding-top: 78px
   .navbar
-    &__search, &-menu, &-user
+    &__mobail
+      &--fixed
+        position: fixed
+        left: 0
+        top: 0
+        right: 0
+        z-index: 99
+    &__user, &__search
+      &__mobile
+        &--hidden
+          display: none
+        &--visible
+          display: flex
+    &__user
+      flex-direction: column
+      justify-content: center
+
+    &-bottom
       display: none
+      position: fixed
+      top: 78px
+      left: 0
+      right: 0
+      bottom: 0
+      padding-top: 30px
+      &--visible
+        display: block
+    &-menu
+      flex-direction: column
+      &__item
+        margin-bottom: 20px
+        &__mobile
+          &--visible
+            display: block
+
   .menu
     &-button
       display: flex
@@ -130,7 +172,12 @@
         width: 16px
         height: 1px
         background-color: $text-color
-
+  .user
+    &__name
+      &--light
+        color: $light
+        margin-left: 0
+        margin-top: 10px
   .stars
     flex-basis: auto
   .hotel
@@ -209,8 +256,23 @@
   .activities
     padding: 40px 0 60px 0
   .footer
+    padding-top: 69px
+    padding-bottom: 21px
     &__input
       flex-basis: 100%
+    &-bottom
+      margin-top: 63px
+      flex-direction: column
+      align-items: flex-start
+      &-text
+        width: 100%
+        margin-bottom: 10px
+      &__link
+        margin-right: 10px
+    &__title
+      &--mb-3
+        margin-bottom: 15px
+
   .packages
     &__wrapper
       grid-template-columns: 1fr
@@ -238,6 +300,7 @@
       &-blue
         border-radius: 0 0 8px 8px
         width: 100%
+
 @media ( max-width: 576px  )
   .logo
     width: 99px

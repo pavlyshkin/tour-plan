@@ -15,7 +15,7 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="navbar">
+  <header class="navbar navbar__mobail--fixed">
     <div class="container">
       <div class="navbar-top">
 
@@ -23,14 +23,14 @@
           <img src="img/horizontal-logo.svg" alt="Logo: Best Tour Plan" class="logo-img">
         </a>
 
-        <form action="#" class="search navbar__search">
+        <form action="#" class="search navbar__search navbar__search__mobile--hidden">
           <input type="text" placeholder="Search Location" class="search__input">
           <button class="button search__button">
             <img src="img/search-icon.svg" alt="Icon: search" class="search-img">
           </button>
         </form>
 
-        <a href="#" class="user navbar-user">
+        <a href="#" class="user navbar-user navbar__user__mobile--hidden">
           <img src="img/avatar.jpg" alt="User: Nathan" class="user__avatar">
           <span class="user__name">Nathan</span>
         </a>
@@ -48,6 +48,24 @@
     <div class="navbar-bottom">
       <div class="container">
         <ul class="navbar-menu">
+          <li class="navbar-menu__item navbar-menu__item__mobile--visible">
+              <a href="#" class="user navbar__user navbar-user__mobile--visible">
+                <img src="img/avatar.jpg" alt="User: Nathan" class="user__avatar">
+                <span class="user__name user__name--light">Nathan</span>
+              </a>
+
+              <!-- /.user -->
+          </li>
+
+          <li class="navbar-menu__item navbar-menu__item__mobile--visible">
+              <form action="#" class="search navbar__search navbar__search__mobile--visible">
+                <input type="text" placeholder="Search Location" class="search__input">
+                <button class="button search__button">
+                  <img src="img/search-icon.svg" alt="Icon: search" class="search-img">
+                </button>
+              </form>
+
+          </li>
           <li class="navbar-menu__item">
             <a href="#" class="navbar-menu__link">All Deals</a>
           </li>
@@ -641,7 +659,9 @@
         <a href="#" class="footer-bottom__link">Conditions of use</a>
         <a href="#" class="footer-bottom__link">Cancellation policy</a>
       </div>
-      <img src="img/pay.svg" alt="" class="footer-bottom__img">
+      <div class="footer-bottom-image">
+        <img src="img/pay.svg" alt="" class="footer-bottom__img">
+      </div>
     </div>
     <!-- /.footer__bottom -->
   </div>

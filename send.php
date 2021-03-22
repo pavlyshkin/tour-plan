@@ -25,16 +25,16 @@ try {
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
-    //$mail->SMTPDebug = 2;
+    // $mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
-    $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'adshell545@gmail.com'; // Логин на почте
-    $mail->Password   = '123Pavel!456'; // Пароль на почте
+    $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
+    $mail->Username   = 'pavl1k.fedorov2@yandex.ru'; // Логин на почте
+    $mail->Password   = 'qwertyui1P'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('adshell545@gmail.com ', 'PeartSmurf'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('pavl1k.fedorov2@yandex.ru', 'Павел'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('pasch.fedorow2013@yandex.ru');  
@@ -57,3 +57,4 @@ else {$result = "error";}
 
 // Отображение результата
 echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+header('location: thankyou.html')

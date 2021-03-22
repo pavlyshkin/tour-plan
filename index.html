@@ -25,7 +25,7 @@
 
         <form action="#" class="search navbar__search navbar__search__mobile--hidden">
           <input type="text" placeholder="Search Location" class="search__input">
-          <button class="button search__button">
+          <button class="search__button">
             <img src="img/search-icon.svg" alt="Icon: search" class="search-img">
           </button>
         </form>
@@ -60,7 +60,7 @@
           <li class="navbar-menu__item navbar-menu__item__mobile--visible">
               <form action="#" class="search navbar__search navbar__search__mobile--visible">
                 <input type="text" placeholder="Search Location" class="search__input">
-                <button class="button search__button">
+                <button class="search__button">
                   <img src="img/search-icon.svg" alt="Icon: search" class="search-img">
                 </button>
               </form>
@@ -125,11 +125,11 @@
           <h1 class="hotel-name hotel-info__name">GRAND HILTON HOTEL</h1>
           <span class="offer hotel-info__offer">Flash Offer</span>
        </div>
-        <p class=" hotel-descripshen hotel-info__descripshen">
+        <p class="hotel-descripshen hotel-info__descripshen">
           Half-Board / All Inclusive + Complimentary Activities + Child Stays Free
         </p>
       </div>
-      <div class="rating hotel-info__rating">
+      <div class="rating hotel-info__rating" data-href="#modal-rating" data-toggle="modal">
         <span class="rating__text">User Rattings</span>
         <span class="rating__counter">4.5/5</span>
       </div>
@@ -185,7 +185,8 @@
               <span class="booking__num">12100</span>
             </a>
           </div>
-          <button class="button booking__button">View Other Options</button>
+          <!-- /.booking__call-canter -->
+          <button data-toggle="modal" data-href="#booking-modal" class="button booking__button">View Other Options</button>
         </div>
         <!-- /.booling -->
         <div class="map" id="map">
@@ -642,10 +643,10 @@
         <!-- /.footer__contact-details -->
         <div class="footer__contact-form">
           <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-          <form action="send.php" method="POST" class="footer__form">
+          <form action="send.php" method="POST" class="form footer__form">
             <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name">
             <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone">
-            <textarea class="footer__message" placeholder="Message" name="message"></textarea>
+            <textarea class="message footer__message" placeholder="Message" name="message"></textarea>
             <button class="button footer__button">Send</button>
             <span class="footer__info">* Required Fields</span>
           </form>
@@ -668,24 +669,53 @@
   <!-- /.container -->
 </footer>
 
-  <div class="modal">
+  <div class="modal" id="booking-modal">
     <div class="modal__overlay"></div>
     <!-- /.modal__overlay -->
     <div class="modal__dialog">
       <a href="" class="modal__close">
         <img src="img/close.svg" alt="icon: close">
       </a>
+      <h3 class="modal__title modal__title--mb-3">Booking</h3>
+      <form action="send.php" method="POST" class="form modal__form">
+        <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name">
+        <input type="text" class="input modal__input" placeholder="Phone Number*" name="phone">
+        <input type="text" class="input modal__input" placeholder="Email*" name="email">
+        <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
+        <button class="button modal__button">Send</button>
+        <span class="modal__info">* Required Fields</span>
+      </form>
     </div>
     <!-- /.modal__dialog -->
   </div>
   <!-- /.modal -->
 
 
+    <div class="modal" id="modal-rating">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal__dialog">
+        <a href="" class="modal__close">
+          <img src="img/close.svg" alt="icon: close">
+        </a>
+        <h3 class="modal__title modal__title--mb-3">Send us a feedback</h3>
+        <form action="send.php" method="POST" class="form modal__form">
+          <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name">
+          <input type="text" class="input modal__input" placeholder="Phone Number*" name="phone">
+          <input type="text" class="input modal__input" placeholder="Email*" name="email">
+          <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
+          <button class="button modal__button">Send</button>
+          <span class="modal__info">* Required Fields</span>
+        </form>
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
+
+
 <script src="js/swiper-bundle.min.js"></script>
-<script src="js/main.js"></script>
-
-<script src="jquery/jquery-3.6.0.min.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/parallax.min.js"></script>
-
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -10,6 +10,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/aos.css">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=996c161b-873d-4ba3-8a32-55ec6e65ce1e&lang=ru_RU" type="text/javascript">
   </script>
 </head>
@@ -19,18 +20,18 @@
     <div class="container">
       <div class="navbar-top">
 
-        <a href="#" class="logo">
+        <a href="#" class="logo" data-aos="fade-right" data-aos-delay="200">
           <img src="img/horizontal-logo.svg" alt="Logo: Best Tour Plan" class="logo-img">
         </a>
 
-        <form action="#" class="search navbar__search navbar__search__mobile--hidden">
+        <form action="#" class="search navbar__search navbar__search__mobile--hidden" data-aos="fade-down" data-aos-delay="200">
           <input type="text" placeholder="Search Location" class="search__input">
           <button class="search__button">
             <img src="img/search-icon.svg" alt="Icon: search" class="search-img">
           </button>
         </form>
 
-        <a href="#" class="user navbar-user navbar__user__mobile--hidden">
+        <a href="#" class="user navbar-user navbar__user__mobile--hidden" data-aos="fade-left" data-aos-delay="200">
           <img src="img/avatar.jpg" alt="User: Nathan" class="user__avatar">
           <span class="user__name">Nathan</span>
         </a>
@@ -135,7 +136,7 @@
       </div>
     </div>
     <div class="hotel-grid">
-        <div class="swiper-container hotel-slider hotel__slider">
+        <div class="swiper-container hotel-slider hotel__slider" data-aos="zoom-in-up" data-aos-delay="150">
           <div class="swiper-wrapper">
             <div class="swiper-slide hotel-slider__item">
               <img class="hotel-slider__image" src="img/slide.jpg" alt="slide">
@@ -524,14 +525,14 @@
   <div class="container">
     <h2 class="activities__title">Other Activities</h2>
     <div class="activities__wrapper">
-      <div class="card activities__card">
+      <div class="card activities__card" data-aos="fade-right" data-aos-delay="100">
         <img src="img/card1.jpg" alt="Picture: shef" class="card__image">
         <h3 class="card__title">The curious corner
         of chamarel</h3>
         <button class="card__button button">Book Now</button>
       </div>
       <!-- /.card -->
-      <div class="card activities__card">
+      <div class="card activities__card" data-aos="fade-up" data-aos-delay="300">
         <img src="img/card2.jpg" alt="Picture: golf" class="card__image">
         <h3 class="card__title">
         Gymkhana club golf
@@ -540,7 +541,7 @@
         <button class="card__button button">Book Now</button>
       </div>
       <!-- /.card -->
-      <div class="card activities__card">
+      <div class="card activities__card" data-aos="fade-down" data-aos-delay="500">
         <img src="img/card3.jpg" alt="Picture: waterfall" class="card__image">
         <h3 class="card__title">
           Tamarind falls hiking
@@ -549,7 +550,7 @@
         <button class="card__button button">Book Now</button>
       </div>
       <!-- /.card -->
-      <div class="card activities__card">
+      <div class="card activities__card" data-aos="fade-left" data-aos-delay="700">
         <img src="img/card4.jpg" alt="Picture: see" class="card__image">
         <h3 class="card__title">
           The blue marine discovery
@@ -750,6 +751,7 @@
 
 
 <script src="js/swiper-bundle.min.js"></script>
+<script src="js/aos.js"></script>
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/parallax.min.js"></script>
 <script src="js/jquery.mask.js"></script>

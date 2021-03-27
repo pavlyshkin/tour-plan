@@ -77,4 +77,16 @@ $(document).ready(function () {
   $('.phone').mask('+0(000)000-00-00', {placeholder: "Phone Number*"});
   AOS.init();
   let isValid = ($('#email').val().match(/.+?\@.+/g) || []).length === 1;
+  
+  $('.mail').each(function(){
+    $(this).validate({
+      errorClass: "onvalid",
+      messages: {
+        mail: {
+          required: "We need your email address to contact you",
+          email: "Your email address must be in the format of name@domain.com"
+        },
+      },
+    })
+  });
 });

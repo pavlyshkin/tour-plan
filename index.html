@@ -7,7 +7,7 @@
   <title>Best Tour Plan - Hotel Booking</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&family=Nunito:wght@400;700;800&display=swap"
-    rel="preload" as="style">
+    rel="stylesheet">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/aos.css">
@@ -62,7 +62,7 @@
               <form action="Send.php" method="POST" class="search navbar__search navbar__search-mobile navbar__search-mobile--visible">
                 <input type="text" placeholder="Search Location" class="search__input">
                 <button class="search__button">
-                  <img src="img/search-icon.svg" alt="Icon: search" class="search-img">
+                  <img src="img/search.svg" alt="Icon: search" class="search-img">
                 </button>
               </form>
 
@@ -131,7 +131,7 @@
       </div>
       <div class="rating hotel-info__rating" data-href="#modal-rating" data-toggle="modal">
         <span class="rating__text">User Rattings</span>
-        <span class="rating__counter">4.5/5</span>
+        <span class="rating__counter">4.5/<span class="rating__counter-light">5</span></span>
       </div>
     </div>
     <div class="hotel-grid">
@@ -212,9 +212,9 @@
         subscribe to our
         <span class="newsletter-title__strong">Newsletter</span>
       </h2>
-      <form action="Send.php" method="POST" class="subcribe newsletter__search">
-        <input type="text" placeholder="Your email address" class="subcribe__input">
-        <button class="button subcribe__button"  data-href="#modal-subcribe" data-toggle="modal">
+      <form action="Send.php" method="POST" class="mail subcribe newsletter__search">
+        <input type="email" placeholder="Your email address" class="subcribe__input" name="mail" id="email" required >
+        <button class="button subcribe__button" id="email" >
         Send
         </button>
       </form>
@@ -494,9 +494,9 @@
                 <img src="img/contact-phone-call.svg" alt="icon: fonk-call" class="footer__icon">
               </div>
              <p class="footer__item-text">
-                Tel (business hours) : <a class="footer__item-link" href="tel:0000000000000000 ">269 1500</a><br>
-                Tel (hotline) Monday - Saturday: <a class="footer__item-link" href="tel:0000000000000000">52-56-61-38</a> (08:00 am – 20:00 pm) <br>
-                Tel (hotline) Sunday: <a class="footer__item-link" href="tel:0000000000000000">52-56-61-38</a> (08:00 am – 14:00 pm)
+                Tel (business hours) : <a class="footer__item-link" href="tel:2691500">269 1500</a><br>
+                Tel (hotline) Monday - Saturday: <a class="footer__item-link" href="tel:52566138">52-56-61-38</a> (08:00 am – 20:00 pm) <br>
+                Tel (hotline) Sunday: <a class="footer__item-link" href="tel:52566138">52-56-61-38</a> (08:00 am – 14:00 pm)
              </p>
             </li>
             <li class="footer__item footer__item--mb-2">

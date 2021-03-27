@@ -85,10 +85,29 @@ $(document).ready(function () {
       errorClass: "onvalid",
       messages: {
         mail: {
-          required: "We need your email address to contact you",
-          email: "Your email address must be in the format of name@domain.com"
+          required: "Need email for contact",
+          email: "Email form name@domain.com"
         },
       },
     })
   });
+
+   $('.shape').each(function(){
+    $(this).validate({
+    errorClass: "fovalid",
+    messages: {
+      name: {
+        required: "Provide a name",
+        minlength: "The name must not be shorter than 2 letters",
+      },
+      email: {
+        required: "We need your email address to contact you",
+        email: "Your email address must be in the format of name@domain.com"
+      },
+      phone: {
+        required: "Phone is required",
+      },
+    },
+  });
+ })
 });

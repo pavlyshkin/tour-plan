@@ -86,10 +86,11 @@
     line-height: 15px
     color: #E0E0E0
   &-bottom
+    position: relative
     margin-top: 101px
     display: flex
-    justify-content: space-between
     align-items: center
+    justify-content: center
     &__link
       font-style: normal
       font-weight: normal
@@ -100,6 +101,10 @@
       margin-right: 14px
       &:last-child
         margin-right: 0
+    &__img
+      position: absolute
+      top: 0
+      right: 0
   &__item
     &-text
       margin-top: 0

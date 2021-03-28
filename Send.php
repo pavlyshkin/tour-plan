@@ -15,10 +15,10 @@ $message = $_POST['message'];
 $title = $name != "" ?
     ($email == "" ? "Новое обращение Best Tour Plan" : "Запрос цены") : "Подписка";
 $body = "<h2>Новое сообщение</h2>".
-($name != "" ? "<b>Имя:</b>" $name<br> : "").
-($phone != "" ? "<b>Телефон:</b>" $phone<br><br> : "").
-($email != "" ? "<b>E-mail:</b>" $email<br> : "").
-($message != "" ? "<b>Сообщение:</b>" $message<br> : "");
+($name != "" ? "<b>Имя:</b> $name<br>" : "").
+($phone != "" ? "<b>Телефон:</b> $phone<br><br>" : "").
+($email != "" ? "<b>E-mail:</b> $email<br>" : "").
+($message != "" ? "<b>Сообщение:</b> $message<br>" : "");
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
@@ -68,3 +68,4 @@ else {$result = "error";}
 
 // Отображение результата
 echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+header('Location: thankyou.php');

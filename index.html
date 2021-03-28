@@ -59,7 +59,7 @@
           </li>
 
           <li class="navbar-menu__item navbar-menu__item-mobile navbar-menu__item-mobile--visible">
-              <form action="Send.php" method="POST" class="search navbar__search navbar__search-mobile navbar__search-mobile--visible">
+              <form action="#" class="search navbar__search navbar__search-mobile navbar__search-mobile--visible">
                 <input type="text" placeholder="Search Location" class="search__input">
                 <button class="search__button">
                   <img src="img/search.svg" alt="Icon: search" class="search-img">
@@ -215,7 +215,7 @@
       </h2>
       <form action="Send.php" method="POST" class="mail subcribe newsletter__search">
         <div class="newsletter__group">
-          <input type="email" placeholder="Your email address" class="mail subcribe__input" name="mail" required>
+          <input type="email" placeholder="Your email address" class="mail subcribe__input" name="email" required>
         </div>
         <button class="button subcribe__button">
         Send
@@ -238,11 +238,11 @@
               <h3 class="reviews-slider__username">Megan Fox</h3>
               <span class="reviews-slider__date">Stayed 18 Nov, 2019</span>
                 <div class="reviews-slider__rating">
-                  <img src="img/Star.svg" alt="star">
-                  <img src="img/Star.svg" alt="star">
-                  <img src="img/Star.svg" alt="star">
-                  <img src="img/Star.svg" alt="star">
-                  <img src="img/Star.svg" alt="star">
+                  <img src="img/Star.svg" alt="star" class="star">
+                  <img src="img/Star.svg" alt="star" class="star">
+                  <img src="img/Star.svg" alt="star" class="star">
+                  <img src="img/Star.svg" alt="star" class="star">
+                  <img src="img/Star.svg" alt="star" class="star">
                 </div>
                 <!-- /.rating -->
             </div>
@@ -265,12 +265,12 @@
               <h3 class="reviews-slider__username">Maik Vazovki</h3>
               <span class="reviews-slider__date">Stayed 18 Nov, 2019</span>
                 <div class="reviews-slider__rating">
-                  <img src="img/Star.svg" alt="star">
-                  <img src="img/Star.svg" alt="star">
-                  <img src="img/Star.svg" alt="star">
-                  <img src="img/Star.svg" alt="star">
-                  <img src="img/Star.svg" alt="star">
-                  <img src="img/Star.svg" alt="star">
+                  <img src="img/Star.svg" alt="star" class="star">
+                  <img src="img/Star.svg" alt="star" class="star">
+                  <img src="img/Star.svg" alt="star" class="star">
+                  <img src="img/Star.svg" alt="star" class="star">
+                  <img src="img/Star.svg" alt="star" class="star">
+                  <img src="img/Star.svg" alt="star" class="star">
                 </div>
                 <!-- /.rating -->
             </div>
@@ -292,12 +292,12 @@
               <h3 class="reviews-slider__username">Barack Obama</h3>
               <span class="reviews-slider__date">Stayed 18 Nov, 2019</span>
                 <div class="reviews-slider__rating">
-                  <img src="img/Star.svg" alt="star">
-                  <img src="img/Star.svg" alt="star">
-                  <img src="img/Star.svg" alt="star">
-                  <img src="img/Star.svg" alt="star">
-                  <img src="img/Star.svg" alt="star">
-                  <img src="img/Star.svg" alt="star">
+                  <img src="img/Star.svg" alt="star" class="star">
+                  <img src="img/Star.svg" alt="star" class="star">
+                  <img src="img/Star.svg" alt="star" class="star">
+                  <img src="img/Star.svg" alt="star" class="star">
+                  <img src="img/Star.svg" alt="star" class="star">
+                  <img src="img/Star.svg" alt="star" class="star">
                 </div>
                 <!-- /.rating -->
             </div>
@@ -319,12 +319,12 @@
               <h3 class="reviews-slider__username">Donald Tramp</h3>
               <span class="reviews-slider__date">Stayed 18 Nov, 2019</span>
               <div class="reviews-slider__rating">
-                <img src="img/Star.svg" alt="star">
-                <img src="img/Star.svg" alt="star">
-                <img src="img/Star.svg" alt="star">
-                <img src="img/Star.svg" alt="star">
-                <img src="img/Star.svg" alt="star">
-                <img src="img/Star.svg" alt="star">
+                <img src="img/Star.svg" alt="star" class="star">
+                <img src="img/Star.svg" alt="star" class="star">
+                <img src="img/Star.svg" alt="star" class="star">
+                <img src="img/Star.svg" alt="star" class="star">
+                <img src="img/Star.svg" alt="star" class="star">
+                <img src="img/Star.svg" alt="star" class="star">
               </div>
               <!-- /.rating -->
             </div>
@@ -364,34 +364,34 @@
         <img src="img/card1.jpg" alt="Picture: shef" class="card__image">
         <h3 class="card__title">The curious corner
         of chamarel</h3>
-        <button class="card__button button">Book Now</button>
+        <button class="card__button button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
       </div>
       <!-- /.card -->
-      <div class="card activities__card" data-aos="fade-up" data-aos-delay="300">
+      <div class="card activities__card" data-aos="fade-right" data-aos-delay="300">
         <img src="img/card2.jpg" alt="Picture: golf" class="card__image">
         <h3 class="card__title">
         Gymkhana club golf
         course
         </h3>
-        <button class="card__button button">Book Now</button>
+        <button class="card__button button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
       </div>
       <!-- /.card -->
-      <div class="card activities__card" data-aos="fade-down" data-aos-delay="500">
+      <div class="card activities__card" data-aos="fade-right" data-aos-delay="500">
         <img src="img/card3.jpg" alt="Picture: waterfall" class="card__image">
         <h3 class="card__title">
           Tamarind falls hiking
           trip - full day
         </h3>
-        <button class="card__button button">Book Now</button>
+        <button class="card__button button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
       </div>
       <!-- /.card -->
-      <div class="card activities__card" data-aos="fade-left" data-aos-delay="700">
+      <div class="card activities__card" data-aos="fade-right" data-aos-delay="700">
         <img src="img/card4.jpg" alt="Picture: see" class="card__image">
         <h3 class="card__title">
           The blue marine discovery
         quest
         </h3>
-        <button class="card__button button">Book Now</button>
+        <button class="card__button button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
       </div>
       <!-- /.card -->
     </div>
@@ -508,7 +508,7 @@
               <div class="footer__icon-wrapper">
                 <img src="img/email.svg" alt="icon: email" class="footer__icon">
               </div>
-              <a href="https://mail.ru/" class="footer__item-email" target="_blank">cherly.lawson@example.com</a>
+              <a href="mailto: cherly.lawson@example.com" class="footer__item-email" target="_blank">cherly.lawson@example.com</a>
             </li>
           </ul>
         </div>
@@ -552,7 +552,7 @@
       <button class="button__close modal__close">
         <img src="img/close.svg" alt="icon: close">
       </button>
-      <h3 class="modal__title modal__title--mb-3">Booking</h3>
+      <h3 class="modal__title">Booking</h3>
       <form action="send.php" method="POST" class="shape modal__form">
         <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required minlength="3" >
         <input type="text" class="input modal__input phone" placeholder="Phone Number*" name="phone" required  minlength="16">

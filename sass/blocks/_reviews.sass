@@ -8,6 +8,7 @@
     text-align: center
     text-transform: uppercase
     margin-bottom: 70px
+    margin-top: 0
   &-slider
     &__item
       position: relative
@@ -42,7 +43,7 @@
         z-index: 0
     &__button
       position: absolute
-      top: 50%
+      top: 47%
       transform: translateY(-50%)
       width: 30px
       height: 30px
@@ -55,10 +56,10 @@
       z-index: 99
       &--prev
         background-image: url(../img/arrow-prev-secondari.svg)
-        left: 0
+        left: 15px
       &--next
         background-image: url(../img/arrow-next-seconadri.svg)
-        right: 0
+        right: 15px
     &__profile
       display: flex
       flex-direction: column
@@ -97,3 +98,8 @@
       text-align: justify
       margin: auto
       max-width: 537px
+      z-index: 1
+.star
+  margin-right: 2px
+  &:last-child
+    margin-right: 0

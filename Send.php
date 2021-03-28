@@ -12,14 +12,13 @@ $message = $_POST['message'];
 
 
 // Формирование самого письма
-$title = "Заголовок письма";
-$body = "
-<h2>Новое обращение Best Tour Plan</h2>
-<b>Имя:</b> $name<br>
-<b>Почта:</b> $email<br><br>
-<b>Сообщение:</b><br>$message
-";
-
+$title = $name != "" ?
+    ($email == "" ? "Новое обращение Best Tour Plan" : "Запрос цены") : "Подписка";
+$body = "<h2>Новое сообщение</h2>".
+($name != "" ? "<b>Имя:</b>" $name<br> : "").
+($phone != "" ? "<b>Телефон:</b>" $phone<br><br> : "").
+($email != "" ? "<b>E-mail:</b>" $email<br> : "").
+($message != "" ? "<b>Сообщение:</b>" $message<br> : "");
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
@@ -31,7 +30,7 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
-    $mail->Username   = 'pavl1k.fedorov2@yandex.ru'; // Логин на почте
+    $mail->Username   = 'pavl1k.fedorov2'; // Логин на почте
     $mail->Password   = 'qwertyui1P'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;

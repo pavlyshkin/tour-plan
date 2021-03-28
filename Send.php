@@ -6,19 +6,19 @@ require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
 $name = $_POST['name'];
-$phone = $_POST['phone'];
 $email = $_POST['email'];
-$message = $_POST['message'];
-
+$phone = $_POST['phone'];
+$message = $_FILES['message'];
 
 // Формирование самого письма
-$title = $name != "" ?
-    ($email == "" ? "Новое обращение Best Tour Plan" : "Запрос цены") : "Подписка";
-$body = "<h2>Новое сообщение</h2>".
-($name != "" ? "<b>Имя:</b> $name<br>" : "").
-($phone != "" ? "<b>Телефон:</b> $phone<br><br>" : "").
-($email != "" ? "<b>E-mail:</b> $email<br>" : "").
-($message != "" ? "<b>Сообщение:</b> $message<br>" : "");
+$title = "Новое обращенеи Best Tour Plan";
+$body = "
+<h2>Новое письмо</h2>
+<b>Имя:</b> $name<br>
+<b>Почта:</b> $email<br><br>
+<b>Сообщение:</b><br>$message
+";
+
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
@@ -56,6 +56,13 @@ if (!empty($file['name'][0])) {
 $mail->isHTML(true);
 $mail->Subject = $title;
 $mail->Body = $body;    
+$mail->SMTPOptions = array(
+'ssl' => array(
+'verify_peer' => false,
+'verify_peer_name' => false,
+'allow_self_signed' => true
+)
+);
 
 // Проверяем отравленность сообщения
 if ($mail->send()) {$result = "success";} 
@@ -67,5 +74,5 @@ else {$result = "error";}
 }
 
 // Отображение результата
-echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
-header('Location: thankyou.php');
+// echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+header('Location: thankyou.html');

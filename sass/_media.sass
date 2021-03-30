@@ -62,6 +62,7 @@
     &-wrapper
       max-width: 700px
   .reviews
+    padding: 19px 0 70px 0
     &-slider
       &__button
         &--prev
@@ -79,6 +80,7 @@
       text-transform: uppercase
       margin-bottom: 50px
   .activities
+    padding: 52px 0 49px 0
     &__wrapper
       flex-wrap: wrap
     &__card
@@ -87,42 +89,66 @@
     width: 339px
     height: 255px
   .footer
-    padding-top: 73px
-    padding-bottom: 33px
+    padding-top: 71px
+    padding-bottom: 46px
     &-wrapper
-      grid-template-columns: repeat(6, 1fr)
-      grid-row-gap: 40px
+      grid-template-columns: repeat(3, max-content)
+      grid-row-gap: 48px
+      width: 100%
     &__input
       &-group
         flex-basis: 49%
     &__logo
       grid-row: 1 / 2
-      grid-column: span 2
+      grid-column: 1
     &__social
       &-network
         grid-row: 1 / 2
-        grid-column: span 4
+        grid-column: 2 / 4
         align-self: center
+        padding-top: 13px
+        margin-left: -14px
+    &__icon
+      &-wrapper
+        width: 24px
+        height: 24px
+        margin-left: 6px
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-right: 15px
     &__title
-      &--inline
-        margin-left: -32px
-        margin-top: 9px
+      margin: 0 0 23px 0
     &__categories
       grid-row: 2 / 3
-      grid-column: span 2
+      grid-column: 1
+      margin-right: 49px
     &__additional
-      grid-column: span 2
+      grid-column: 2
+      margin-right: 53px
     &__contact
       &-details
-        grid-column: span 5
+        margin-bottom: 12px
+        grid-column: 1 / 4
         grid-row: 3
       &-form
-        grid-column: span 5
+        grid-column: 1 / 4
         grid-row: 4
+    &__legal
+      grid-column: 3
+    &__form
+      max-width: 539px
+    &__item
+      line-height: 157%
+      &--mb-2
+        &:last-child
+          margin-bottom: 0
     &-bottom
       display: flex
       justify-content: space-between
       align-items: center
+      margin-top: 63px
+
   .logo
     width: 104px
   .packages
@@ -236,7 +262,7 @@
   .map
     width: 100%
   .newsletter
-    padding: 76px 0 83px 0
+    padding: 60px 0 65px 0
     &-wrapper
       max-width: 576px
       width: 92%
@@ -282,9 +308,9 @@
     width: 49%
     height: 255px
   .activities
-    padding: 40px 0 60px 0
+    padding: 40px 0 50px 0
   .footer
-    padding-top: 69px
+    padding-top: 67px
     padding-bottom: 21px
     &__input
       &-group
@@ -341,7 +367,7 @@
       margin-bottom: 20px
       height: 178px
   .newsletter
-    padding: 40px 0 60px 0
+    padding: 40px 0 45px 0
     .subscride
       width: 100%
   .reviews
@@ -381,8 +407,10 @@
     &__title
       &--inline
         margin-left: 0
+        margin-bottom: 25px
     &-wrapper
       grid-template-columns: 1fr
+      grid-row-gap: 24px
     &__logo
       grid-row: 1
       grid-column: 1
@@ -390,14 +418,16 @@
       &-network
         grid-row: 2
         grid-column: 1
+        margin-left: 0
+        flex-direction: column
     &__additional
-      grid-row: 3
-      grid-column: 1
-    &__categories
       grid-row: 4
       grid-column: 1
-    &__legal
+    &__categories
       grid-row: 5
+      grid-column: 1
+    &__legal
+      grid-row: 3
       grid-column: 1
       margin-left: 0
     &__contact

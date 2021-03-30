@@ -8,7 +8,7 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
-$message = $_FILES['message'];
+$message = $_POST['message'];
 
 // Формирование самого письма
 $title = "Новое обращенеи Best Tour Plan";
